@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #272f4b;
+    align-items: center;
+    justify-content: center;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+  }
+
+
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: rgb(0, 0, 0);
+  }
+  
+  .topnav .icon {
+    
+    display: none;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+.main-image{
+    position: relative;
+    background:  url(imagenes/Desde\ 1998.png) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    overflow: hidden;
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 8px 8px #333333;
+}
+
+
+.boxTex h1{
+    text-align: center;
+  }
+
+  .boxTex{
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 0px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .column {
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-left: 34px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  .row {
+    margin: 0px;
+    margin-top: 60px;
+    align-items: center;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .card {
+    padding: 16px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .card  span {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+  }
+
+
+
+  .productos-inicio{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-auto-rows: 35rem;
+    grid-column: span 2;
+    gap: 3rem;
+    margin-left: 15%;
+  
+  }
+
+  .cards{
+    position: relative;
+    height: 400px;
+    margin: 0px;
+    width: 550px;
+    margin-top: 0px;
+    align-items: center;
+    
+    
+  }
+  
+  
+  
+  .cards .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+  }
+  
+  .cards .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .cards .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cards .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  .cards .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(95, 97, 99);
+    padding: 15px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .cards .back .link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .cards .back .link a{
+    color: #f3f3f3;
+  }
+  .cards .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  .cards .back p{
+    letter-spacing: 2px;
+  }
+  
+  .cards:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+  }
+  
+  .cards:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+  }
+
+  .product h3{ 
+    color:#f3f3f3;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-size: 45px;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .column {
+      width: 95%;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .column {
+      width: 90%;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1400px){
+    
+    .productos-inicio{
+        display: grid;
+        grid-template-columns: 25% 25%;
+        grid-auto-rows: 15rem;
+        grid-column: span 2;
+        gap: 15rem;
+
+    
+    } 
+    .cards{
+        position: relative;
+        height: 400px;
+        margin: 0px;
+        width: 450px;
+        margin-top: 0px;
+        
+      }
+  }
+
+  @media screen and (max-width: 1300px){
+    .productos-inicio{
+    display: block;
+
+    
+    } 
+    .cards{
+        display: block;
+        height: 400px;
+        margin: 50px;
+        width: 700px;
+        margin-top: 0px;
+        
+      }
+  }
+
+  @media screen and (max-width: 960px){
+    .productos-inicio{
+        display: block;
+    
+        
+        } 
+        .cards{
+            display: block;
+            height: 400px;
+            margin: 50px;
+            width: 550px;
+            margin-top: 0px;
+            
+          }
+  }
+
+  @media screen and (max-width: 790px){
+    .productos-inicio{
+        display: block;
+    
+        
+        } 
+        .cards{
+            display: block;
+            height: 290px;
+            margin: 50px;
+            width: 400px;
+            margin-top: 0px;
+            
+          }
+  }
+
+  @media screen and (max-width: 590px){
+    .productos-inicio{
+        display: block;
+        } 
+
+        .cards .back h3{
+            font-size: 20px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+          }
+          .cards .back p{
+            letter-spacing: 2px;
+          }
+        .cards{
+            display: block;
+            height: 280px;
+            margin: 50px;
+            width: 310px;
+            margin-top: 0px;
+            
+          }
+  }
+
+  
+  @media screen and (max-width: 485px){
+    .productos-inicio{
+        display: block;
+    } 
+    .cards .back h3{
+        font-size: 15px;
+        margin-top: 0px;
+        letter-spacing: 2px;
+      }
+      .cards .back p{
+        letter-spacing: 1px;
+        font-size: 10;
+      }
+    .cards{
+        display: block;
+        height: 250px;
+        margin: 50px;
+        width: 270px;
+        margin-top: 0px;
+            
+     }
+
+  }
+
+  @media screen and (max-width: 400px){
+    .productos-inicio{
+        display: block;
+    
+        
+    } 
+    .cards{
+        display: block;
+        height: 200px;
+        margin: 50px;
+        width: 190px;
+        margin-top: 0px;
+            
+    }
+
+    .boxTex h1{
+        text-align: center;
+      }
+    
+      .boxTex{
+        color: white;
+        font-size: 17px;
+        width: 100%;
+        padding: 0px;
+        line-height: 35px;
+        text-align: center;
+        margin-top: 45px;
+      }
+
+
+  }
